@@ -1,0 +1,23 @@
+extends /src/views/common/lk-layout
+
+block append defs
+	-
+		pageTitle = "Новый вопрос";
+		groupTitle = "Задать вопрос администрации";
+
+block blockLkContent
+	h1.lk-title Вопрос администрации
+	.lk-form
+		label
+			span Тема
+			input(type='text')
+		label
+			span Сообщение
+			textarea
+		label
+			span Файл
+			input(type='file')
+			span.file-holder
+				span(href='/') Выбрать файл
+		button.green-button(type='submit') Отправить
+		span.remark Ответ будет отправлен на электронный адрес указанный при регистрации

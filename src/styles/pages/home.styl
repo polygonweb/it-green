@@ -1,0 +1,89 @@
+section
+  .main-banner
+    background url(../img/slider.png) no-repeat center center
+    height 392px
+    .main-banner-actions
+      padding-left 714px
+      padding-top 144px
+      .main-banner-action
+        display inline-block
+        background-color siteGreen1
+        background-repeat no-repeat
+        background-position-y center
+        border-bottom 3px solid siteGreen3
+        &.selfmade
+          background-image url(../img/send.png)
+          background-position-x 5px
+        &.shop
+          margin-top 20px
+          background-image url(../img/shop.png)
+          background-position-x 8px
+        span
+          display inline-block
+          width 260px
+          line-height 61px
+          font-size 1.25em
+          font-family LatoBold
+          color white
+          text-transform uppercase
+          text-align center
+          margin-left 62px
+          background siteGreen2
+
+  .company-info
+    min-height 280px
+    margin-top 37px
+    margin-left -22px
+    margin-bottom 84px
+    .company-info-container
+      padding-top 41px
+      padding-left 296px
+      .company-info-text
+        margin-bottom 21px
+        > p
+          font-size 1.063em
+          padding-top 27px
+          line-height 1.4em
+    .company-face
+      float left
+    .green-button
+      span
+        background none
+
+  .green-button
+    display inline-block
+    border-bottom 3px solid siteGreen3
+    span
+      display inline-block
+      width 150px
+      line-height 40px
+      font-size 1.25em
+      font-family LatoBold
+      color white
+      text-transform uppercase
+      text-align center
+      background siteGreen2
+  .title
+    font-size 2em
+    font-family LatoBold
+    color siteDarkBlue
+
+
++mq(main)
+  section
+    .company-info
+      margin-left 0px
+      .company-info-container
+        padding-left 0px
+        margin 0 auto
+      .company-face
+        display block
+        float none
+        //margin 0 auto
+
+  section
+    .main-banner
+      .main-banner-actions
+        padding-top 181px
+        padding-left 0
+        text-align center

@@ -1,0 +1,84 @@
+.modal-holder
+  position fixed
+  top 0
+  left 0
+  overflow auto
+  -webkit-overflow-scrolling touch
+  width 100%
+  height 100%
+  background rgba( 0, 0, 0, 0.3 )
+
+.modal-close
+  background url(../img/mclose.png) no-repeat center
+  width 25px
+  height 25px
+  float right
+  cursor pointer
+
+.modal-enter
+  box-sizing border-box
+  width 578px
+  background white
+  margin 0 auto
+  margin-top 165px
+
+  .modal-content
+    padding-left 38px
+    padding-top 32px
+    padding-right 36px
+    h2
+      display  inline-block
+      font-family LatoBold
+      font-size 32px
+      color #4d7abe
+
+  .social-enter
+    border-top 1px solid #f0f0f0
+    text-align center
+    margin-bottom 32px
+    .social-enter-hint
+      font-family LatoBold
+      color black
+      font-size 22px
+      padding-top 25px
+      padding-bottom 25px
+    .social-enter-buttons
+      display  inline-block
+      font-family LatoBold
+      font-size 24px
+      color white
+      .social-enter-button
+        box-sizing border-box
+        display inline-block
+        width 240px
+        height 51px
+        line-height 51px
+        background-repeat no-repeat
+        background-position-y center
+        text-align left
+        cursor pointer
+
+      .enter-vk
+        background-color #4a739f
+        background-image url('../img/vk-enter.png')
+        background-position-x 26px
+        padding-left 83px
+        margin-right 10px
+      .enter-fb
+        background-color #2e5d9a
+        background-image url('../img/fb-enter.png')
+        background-position-x 25px
+        padding-left 65px
+  .register-line
+    height 48px
+    line-height 48px
+    font-size 16px
+    text-align center
+    background-color #f0f0f0
+    .first-time
+      color #7f8da2
+    .register-link
+      color #4d7abe
+      text-decoration underline
+
+@import "modal-mobile.styl"

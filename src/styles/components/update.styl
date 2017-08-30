@@ -1,0 +1,26 @@
+.update
+  display table
+  table-layout fixed
+  width 100%
+
+  &-control
+    padding-right 16px
+    display table-cell
+
+  &-action
+    display table-cell
+
+    .action
+      padding-left 25px
+      min-height 18px
+      font-size 12px
+      background url("../img/update.png") no-repeat 0 50%
+
+  +mq("(max-width: 480px)")
+    &-control
+    &-action
+      display block
+
+     &-action
+      padding-top 5px
+      padding-bottom 5px

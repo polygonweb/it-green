@@ -1,0 +1,172 @@
+.footer
+  // height footerHeight
+  // margin-top - footerHeight
+
+  .high-footer
+    overflow hidden
+    padding-bottom 14px
+    // height highFooterHeight
+    background-color highFooterBg
+
+    .footer-social-container
+      display inline-block
+
+      .footer-social-title
+        display inline-block
+        margin-top 29px
+        font-family LatoBold
+        font-size 1.38em
+        color white
+        vertical-align top
+
+      .footer-social
+        size = 56px
+        margin-top 15px
+        margin-left 16px
+        display inline-block
+        lato-inline-fixer()
+        width size
+        height size
+        background url(../img/social_down.png) no-repeat center left
+
+        &.vk
+          background-position-x 0px
+        &.fb
+          background-position-x - (size + 16px)
+
+    .feedback
+      margin-left 29px
+      margin-top 30px
+      float right
+      vertical-align top
+      padding-left 37px
+      min-height: 26px;
+      line-height 1.4em
+      font-family LatoBold
+      color white
+      background url(../img/mailus.png) no-repeat bottom left
+
+      span
+        font-size 1.38em
+        border-bottom 1px solid white
+
+  .middle-footer
+    height middleFooterHeight - 38px
+    background-color middleFooterBg
+    padding-top 38px
+    padding-left 11px
+    lato-inline-fixer()
+
+    .footer-section
+      display inline-block
+      vertical-align top
+      color white
+      font-size 0.875em
+
+      > p
+        font-size 1.1em
+        line-height 1.1em
+
+      &.copyright
+        width 223px
+
+      &.address
+        width 243px
+
+      &.phone
+        width 196px
+
+      &.mess
+        width 226px
+
+      &.email
+        width 151px
+
+    .footer-section-head
+      display inline-block
+      font-family LatoBold
+      color siteTextGray2
+      text-transform uppercase
+      margin-bottom 7px
+
+  .low-footer
+    lato-inline-fixer()
+
+    .payable
+      display inline-block
+      color siteTextGray3
+      font-family LatoBold
+      text-transform uppercase
+      vertical-align top
+      margin-top 12px
+      margin-left 1px
+      margin-right 41px
+
+    .payable-agent
+      display inline-block
+      height 40px
+      background url(../img/payment.png) no-repeat center left
+
+      &.visa
+        width 55px
+        background-position-x 0px
+        margin-right 21px
+
+      &.mastercard
+        width 101px
+        background-position-x -79px
+        margin-right 23px
+
+      &.sberbank
+        width 74px
+        background-position-x -206px
+        margin-right 22px
+
+      &.qiwi
+        width 50px
+        background-position-x -305px
+        margin-right 28px
+
+      &.ya
+        width 50px
+        background-position-x -386px
+        margin-right 21px
+
+      &.webmoney
+        width 84px
+        background-position-x -460px
+
++mq(main)
+  .footer
+    .high-footer
+      // height 154px
+      padding-bottom 32px
+
+      .feedback
+        display block
+        margin-left 4px
+        margin-top 23px
+        float none
+
+      .footer-social-container
+        .footer-social
+          margin-left 10px
+
+    .middle-footer
+      height 265px
+      padding-top 24px
+      box-sizing border-box
+
+      .footer-section
+        float right
+        // margin-right -47px
+        min-height 93px
+        width 165px !important
+
+        &:nth-child(2n)
+          margin-right 0px
+          float left
+          width 50% !important
+
+        &.copyright
+          display none

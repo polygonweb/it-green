@@ -1,0 +1,22 @@
+@require "functions";
+@require "controls";
+@require "responsive";
+@require "layout";
+
+lato-inline-fixer()
+  inline-fixer(0.25em)
+
+inline-fixer(n)
+  &
+    letter-spacing - n
+  > *
+    letter-spacing normal
+
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+square(n)
+  width n
+  height n

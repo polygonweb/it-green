@@ -1,0 +1,75 @@
+.user-area
+  $this = selector()
+  position relative
+
+  .action.user
+    padding-left: 26px;
+    font-size: 16px;
+    text-transform: none;
+    background-image: url(../img/user.png);
+
+    &::after
+      content ""
+      display inline-block
+      transform rotate(-180deg)
+      width 13px
+      height 8px
+      background url("../img/arrow.png") no-repeat
+      transition .2s
+
+  &.is-active .action.user::after
+    transform none
+
+  &-menu
+    position absolute
+    top 100%
+    left 0
+    margin-top 8px
+    opacity 0
+    visibility hidden
+    min-width 100%
+    font-size 14px
+    background #fff
+    border-radius 5px
+    box-shadow 0 0 4px rgba(0, 0, 0, 0.16)
+
+    &::before
+      content ""
+      position absolute
+      left 68px
+      bottom 100%
+      border 6px solid transparent
+      border-top 0
+      border-bottom-color #fff
+
+    ul
+      margin 0
+      padding 0
+      list-style none
+
+    a
+      display block
+      padding 12px 32px
+      text-decoration none
+      background-repeat no-repeat
+      background-position 13px 50%
+      transition .2s
+
+      &:hover
+        background-color #e6f1d2
+        // background-color #f0f0f0
+
+    li:not(:first-child) a
+        border-top 1px solid #f0f0f0
+
+  &.is-active &-menu
+    opacity 1
+    visibility visible
+    transition .3s
+
+  &.is-active
+    .user
+      color #000
+      span
+        background 0
+        border-color transparent

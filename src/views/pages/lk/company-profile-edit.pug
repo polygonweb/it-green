@@ -1,0 +1,113 @@
+extends /src/views/common/lk-layout
+
+block append defs
+	-
+		groupTitle = "Профиль фирмы";
+		pageTitle = "Редактировать профиль";
+
+block blockLkContent
+	h1.lk-title
+		| Профиль фирмы
+
+	form.b-form
+		fieldset.b-fieldset
+			.b-form-field
+				label.b-form-field__key Название фирмы
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="text")
+
+			.b-form-field
+				label.b-form-field__key Город
+				.b-form-field__content
+					.itgreen-select.width-full
+						select.b-form-field__control
+							option Москва
+
+			.b-form-field
+				label.b-form-field__key Адрес
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="text")
+					.b-form-field__hint Улица, дом, строение, квартира
+
+			.b-form-field
+				label.b-form-field__key Индекс
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-form-field__control'
+					], type="text")
+
+			.b-form-field
+				label.b-form-field__key Телефон
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="text")
+
+			.b-form-field
+				label.b-form-field__key Режим работы
+				.b-form-field__content
+					.b-work-mode
+						.b-work-mode__period
+							.b-work-mode__cell.b-work-mode__day
+								.itgreen-select.width-full
+									select.b-form-field__control
+										option Понедельник
+							.b-work-mode__cell.b-work-mode__label с
+							.b-work-mode__cell.b-work-mode__time
+								.itgreen-select.width-full
+									select.b-form-field__control
+										option 08:30
+							.b-work-mode__cell.b-work-mode__label до
+							.b-work-mode__cell.b-work-mode__time
+								.itgreen-select.width-full
+									select.b-form-field__control
+										option 08:30
+
+						.b-work-mode__around
+							label.b-control-wrapper
+								input(class=[
+									'b-control',
+									'b-control_type_checkbox',
+									'b-control-wrapper__input'
+								], type='checkbox')
+								| Круглосуточно
+
+						.b-form-field__side.b-work-mode__add
+							button.action.add-action(type='button')
+								div.action-text Добавить
+
+			.b-form-field
+				label.b-form-field__key Объявления
+				.b-form-field__content
+					textarea(class=[
+						'b-text-input',
+						'b-text-input_multiline',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], style='height: 140px')
+					.b-form-field__hint Например: 1-7 января выходные
+
+			.b-form-field
+				label.b-form-field__key Выполняемые #[br] заказы
+				.b-form-field__content
+					textarea(class=[
+						'b-text-input',
+						'b-text-input_multiline',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], style='height: 140px')
+					.b-form-field__hint Например: кружки, футболки, печать холстов, печать портфолио
+
+		fieldset.b-fieldset.b-form__footer
+			button.b-form__footer-submit.green-button(type="submit") Сохранить

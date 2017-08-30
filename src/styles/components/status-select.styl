@@ -1,0 +1,59 @@
+.status-select
+  cursor pointer
+  position relative
+
+  .options
+    position absolute
+    border 1px solid #adadad
+    border-radius(4px)
+    background white
+    z-index 1000
+    min-width 120px
+
+    .order-status
+      padding-top 5px
+      padding-bottom 5px
+      padding-right 5px
+
+      &:hover
+        color black
+        background-color rgba(0,0,0,0.1)
+
+  .selected
+    .order-status
+        position relative
+        display inline-block
+
+        &:after
+          position absolute
+          content ""
+          background url('../img/darkarrow.png') no-repeat center right
+          right -15px
+          display block
+          width 10px
+          height 10px
+          top 6px
+
+.order-status
+  line-height 24px
+  padding-left 25px
+  background-repeat no-repeat
+  background-position  5px center
+
+  &.formed
+    background-image url('../img/status-formed.png')
+
+  &.rambleon
+    background-image url('../img/status-ontheway.png')
+
+  &.ready
+    background-image url('../img/status-ready.png')
+
+  &.debt
+    background-image url('../img/status-notpayd.png')
+
+  &.credit
+    background-image url('../img/status-ready.png')
+
+  &.process
+    background-image url('../img/status-process.png')

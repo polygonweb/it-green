@@ -1,0 +1,51 @@
+extends /src/views/common/lk-layout
+
+block append defs
+	-
+		groupTitle = "Управление счетом";
+		pageTitle = "Вывод средств";
+
+block blockLkContent
+	h1.lk-title
+		|Вывод средств
+
+	.b-pay-summary-wrapper
+		.b-pay-summary
+			| Заработано: #[span.b-pay-summary__sum.b-price 365,05 #[span.rouble q]]
+
+	form.b-form
+		fieldset.b-fieldset
+			.b-form-field
+				label.b-form-field__key Сумма вывода
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_price',
+						'b-form-field__control'
+					], type="text")
+
+			.b-form-field
+				label.b-form-field__key.b-form-field__key_payment Выберете способ  вывода средств
+				.b-form-field__content.b-form-field__content_payment
+					.b-pay
+						.b-pay__method
+							.b-pay-method
+								label.b-pay-method__cell
+									input.b-pay-method__input(type='radio', name='pay-method')
+									span.b-pay-method__label
+										img.b-pay-method__icon(src="img/pay-sb.png", alt="Сбербанк онлайн")
+										span.b-pay-method__title Сбербанк онлайн
+								label.b-pay-method__cell
+									input.b-pay-method__input(type='radio', name='pay-method')
+									span.b-pay-method__label
+										img.b-pay-method__icon(src="img/pay-visa.png", alt="Visa/Mastercard")
+										span.b-pay-method__title Visa/Mastercard
+								label.b-pay-method__cell
+									input.b-pay-method__input(type='radio', name='pay-method')
+									span.b-pay-method__label
+										img.b-pay-method__icon(src="img/pay-cash.png", alt="Наличными")
+										span.b-pay-method__title Наличными
+						.b-pay__info Комиссия составит 3%
+
+		fieldset.b-fieldset.b-form__footer
+			button.b-form__footer-submit.green-button(type="submit") Вывести средства

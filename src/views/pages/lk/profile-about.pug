@@ -1,0 +1,43 @@
+extends /src/views/common/lk-layout
+
+block append defs
+	-
+		groupTitle = "Мой профиль";
+		pageTitle = "О себе";
+
+block blockLkContent
+	h1.lk-title
+		| О себе
+
+	form.b-form
+		fieldset.b-fieldset
+			.b-form-field
+				label.b-form-field__key Телефон
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="tel")
+
+			.b-form-field
+				label.b-form-field__key ФИО
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="text")
+
+			.b-form-field
+				label.b-form-field__key E-mail
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="emial")
+
+		fieldset.b-fieldset.b-form__footer
+			button.b-form__footer-submit.green-button(type="submit") Сохранить
+

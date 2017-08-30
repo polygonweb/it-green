@@ -1,0 +1,24 @@
+extends /src/views/pages/home/index
+
+block modals
+	.modal-holder
+		.modal-window.modal-enter
+			.modal-content
+				h2 Вход
+				.modal-close
+				form.itgreen-form
+					label
+						span Телефон
+						input(type='text')
+					label
+						span Пароль
+						input(type='text')
+					button.green-button.button-enter(type='submit') Войти
+				.social-enter
+					p.social-enter-hint или войдите через социальную сеть
+					.social-enter-buttons
+						.social-enter-button.enter-vk ВКонтакте
+						.social-enter-button.enter-fb Facebook
+			.register-line
+				span.first-time Впервые на сайте?
+				a(href='javascript:void(0)') Зарегистрируйтесь

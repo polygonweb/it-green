@@ -1,0 +1,16 @@
+extends layout
+include lk-menu
+
+block append defs
+	-
+		var user = {
+			name: username || "Имя пользователя"
+		};
+
+block blockContent
+	// START .lk-page
+	.wrapper.lk-page
+		+lkMenu(active=((groupTitle + pageTitle) || ""))
+		.lk-content
+			block blockLkContent
+	// END .lk-page

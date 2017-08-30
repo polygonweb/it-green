@@ -1,0 +1,62 @@
+.b-form-field
+  clear both
+  display table
+  table-layout fixed
+
+  & + &
+    margin-top 25px
+
+  &__key
+  &__content
+    display table-cell
+    vertical-align baseline
+
+  &__key
+    box-sizing border-box
+    width 176px
+    padding-right 12px
+
+    &_payment
+      padding-top 12px
+
+  &__content
+    position relative
+    max-width 100%
+    width 388px
+
+    &_payment
+      vertical-align top
+      width auto
+
+  &__side
+    position absolute
+    top 0
+    left 100%
+    margin-left 8px
+
+  &__control
+    vertical-align baseline
+    font-size inherit
+
+    textarea&
+      // vertical-align middle
+      display block
+
+  &__hint
+    padding 5px 0
+    font-size 12px
+    color #818181
+
+  +mq(main)
+    &
+    &__key
+    &__content
+      display block
+      width auto
+
+    &__key
+      margin-bottom 7px
+
+    &__side
+      position static
+      margin 10px 0

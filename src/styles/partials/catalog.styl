@@ -1,0 +1,92 @@
+.catalog
+  .catalog-items
+    margin-top 32px
+    font-size 0
+    // lato-inline-fixer()
+
+  .catalog-item
+    margin-bottom 64px
+    margin-right 62px
+    position relative
+    display inline-block
+    vertical-align top
+    padding-top 31px
+    width 358px
+    font-size 16px
+    font-size 1rem
+    background white
+    border-radius(4px)
+
+    .arrow
+      visibility hidden
+      opacity 0
+      background url(../img/arrows.png) center left
+      width 27px
+      height 41px
+      position absolute
+      cursor pointer
+      top 30%
+      transition .2s
+      &.previous
+        left 10px
+      &.next
+        background-position-x 28px
+        right 10px
+
+    &.sale:before
+      content ''
+      display block
+      background url(../img/sale.png) no-repeat
+      position absolute
+      left -7px
+      top 26px
+      width 100px
+      height 40px
+
+    &:hover
+      box-shadow: 0 15px 40px rgba(48, 48, 48, 0.32);
+
+      .arrow
+        visibility visible
+        opacity 1
+
+    &:nth-child(3n)
+      margin-right 0
+
+    .catalog-item-slides
+      text-align center
+      width 358px
+      height 240px
+      display table-cell
+      vertical-align middle
+
+      img
+        max-width 358px
+        max-height 240px
+
+    .catalog-item-title
+      display block
+      font-size 1.2em
+      text-decoration underline
+      padding-left 29px
+      margin-top 51px
+      height 56px
+
+    .price
+      display block
+      font-size 1.3em
+      padding-left 31px
+      margin-bottom 46px
+
++mq(main)
+  .catalog
+    .catalog-items
+      text-align center
+
+    .catalog-item
+      &
+      &:nth-child(3n)
+        margin-left auto
+        margin-right auto
+        display block
+        overflow hidden

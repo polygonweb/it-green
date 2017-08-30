@@ -1,0 +1,6 @@
+mixin filterSelect(props)
+	.itgreen-filter-select
+		span.placeholder #{props.title}
+			.itgreen-filter-options(style='display: none;')
+				each item in props.data
+					.itgreen-filter-option #{item}

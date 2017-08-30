@@ -1,0 +1,12 @@
+mixin toggle(attrs)
+	- var attrs = attrs || attributes;
+	.b-toggle
+		each option in attrs.options
+			label.b-toggle__item
+				input.b-toggle__input(
+					type="radio",
+					name=attrs.name,
+					value=option.value
+					checked=!!option.checked
+				)
+				span.b-toggle__label #{option.text}

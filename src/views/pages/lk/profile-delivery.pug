@@ -1,0 +1,59 @@
+extends /src/views/common/lk-layout
+
+block append defs
+	-
+		groupTitle = "Мой профиль";
+		pageTitle = "Адрес доставки";
+
+block blockLkContent
+	h1.lk-title
+		| Адрес доставки
+
+	form.b-form
+		fieldset.b-fieldset
+			.b-form-field
+				label.b-form-field__key ФИО
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="text")
+
+			.b-form-field
+				label.b-form-field__key Город
+				.b-form-field__content
+					.itgreen-select
+						select.b-form-field__control
+							option Москва
+
+			.b-form-field
+				label.b-form-field__key Индекс
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-form-field__control'
+					], type="text")
+
+			.b-form-field
+				label.b-form-field__key Адрес
+				.b-form-field__content
+					input(class=[
+						'b-text-input',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], type="text")
+					.b-form-field__hint Улица, дом, строение, квартира
+
+			.b-form-field
+				label.b-form-field__key Комментраии для менеджера
+				.b-form-field__content
+					textarea(class=[
+						'b-text-input',
+						'b-text-input_multiline',
+						'b-text-input_width_full',
+						'b-form-field__control'
+					], style='height: 140px')
+
+		fieldset.b-fieldset.b-form__footer
+			button.b-form__footer-submit.green-button(type="submit") Сохранить

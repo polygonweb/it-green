@@ -1,0 +1,5 @@
+mixin catalog-items(title, data)
+	span.catalog-title.title #{title}
+	.catalog-items
+		each item in data
+			+catalog-item(item)

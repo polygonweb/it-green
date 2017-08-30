@@ -1,0 +1,23 @@
+extends /src/views/common/lk-layout
+
+block append defs
+	-
+		pageTitle = "История сообщений";
+		groupTitle = "Мои сообщения";
+
+block blockLkContent
+	h1.lk-title История сообщений
+
+	.lk-wrapper
+		.msg-table
+			- for(let i = 0; i < 13; i++)
+				a(href="lk-my-messages-view.html").msg-table-row
+					.msg-reciever Константин
+					.msg-text При прочих равных условиях лизиметр представляет собой непромывной ил. Сдавливание, ни казалось парадоксальным
+					.msg-date 01 Сент 2017 00:15
+
+	.paginator-wrapper
+		.paginator
+			.page.current 1
+			.page 2
+			.page 3

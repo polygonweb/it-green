@@ -1,0 +1,8 @@
+mixin catalog-item(data)
+	.catalog-item(class=(data.isStock && !!data.isStock) ? 'sale' : null)
+		.catalog-item-slides
+			a.arrow.next
+			a.arrow.previous
+			img.catalog-item-image(src=data.imageUrl)
+		a.catalog-item-title #{data.title}
+		span.price.rouble #{data.price}

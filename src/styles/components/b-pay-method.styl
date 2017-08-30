@@ -1,0 +1,62 @@
+.b-pay-method
+  $this = selector()
+  overflow hidden
+
+  &__cell
+    margin-right 13px
+    margin-bottom 5px
+    position relative
+    float left
+    // display table
+    border-collapse collapse
+    box-sizing border-box
+    width 166px
+    height 145px
+    cursor pointer
+
+  &__input
+    position absolute
+    top 0
+    left 0
+    width 0
+    height 0
+    opacity 0
+
+  &__label
+    position relative
+    // display table-cell
+    // vertical-align middle
+    display block
+    padding-top 90px
+    box-sizing border-box
+    height 100%
+    border 3px solid #f0f0f0
+    text-align center
+    transition .2s
+
+  &__icon
+    position absolute
+    left 0
+    right 0
+    bottom 62px
+    margin auto
+
+  &__title
+    color siteDarkBlue
+    background linear-gradient(90deg, currentColor 3px, transparent 0) repeat-x 0 100%
+    background-size 6px 1px
+
+  &__cell:hover &__label
+    border-color siteLightGray
+
+  &__input:checked + &__label
+    border-color siteGreen2
+
+    {$this}__title
+      font-family LatoBold, sans-serif
+      background 0
+
+  +mq(main)
+    &__cell
+      float none
+      display block

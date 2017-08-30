@@ -1,0 +1,54 @@
+.b-toggle
+  position relative
+  display inline-block
+  vertical-align middle
+  overflow hidden
+  user-select none
+
+  &__item
+    position relative
+    float left
+    border 1px solid #d1d1d1
+    overflow hidden
+    border-radius 3px
+    color #616060
+    background #fff
+    transition .2s
+    cursor pointer
+
+    &:first-child
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+
+    &:last-child
+      border-top-left-radius 0
+      border-bottom-left-radius 0
+
+    &:not(:first-child):not(:last-child)
+      border-radius 0
+
+    & + &
+      margin-left -1px
+
+    &:hover
+      background #f0f0f0
+
+  &__input
+    position absolute
+    top 0
+    left 0
+    width 0
+    height 0
+    opacity 0
+    cursor pointer
+
+  &__label
+    display block
+    min-width 28px
+    padding 8px 10px
+    text-align center
+    transition .2s
+
+  &__input:checked + &__label
+    background-color siteGreen2
+    box-shadow 0 3px siteGreen3 inset

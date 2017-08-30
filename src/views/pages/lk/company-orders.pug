@@ -1,0 +1,65 @@
+extends /src/views/common/lk-layout
+
+block append defs
+	-
+		pageTitle = "Заказы";
+		groupTitle = "Заказы фирмы";
+
+block blockLkContent
+	h1.lk-title Заказы
+	.lk-form
+		.filter
+			+filterSelect({
+				title: 'Статус заказа',
+				data: ['Сформирован', 'В пути', 'Исполнен']
+			})
+
+			+filterSelect({
+				title: ' Статус оплаты',
+				data: ['Не оплачен', 'Оплачен']
+			})
+
+		.itgreen-table.orders-table
+			- for(let i = 0; i < 13; i++)
+				.title-row
+					.title-cell Номер, дата заказа
+					.title-cell ФИО
+					.title-cell Адрес доставки, индекс
+					.title-cell Телефон
+					.title-cell Статус заказа и оплаты
+					.title-cell
+				.itgreen-table-row
+					.itgreen-cell
+						a.order-number(href='javascript:void(0)') 0018883278
+						span.order-date 01 Сентября 2017
+					.itgreen-cell Константин Константинович Константинопольский
+					.itgreen-cell 618320, Пермь, Пермский кр., ул.Ленина, 72, кв.10
+					.itgreen-cell +7 (900) 000-00-00
+					.itgreen-cell
+						.status-select
+							.selected
+								.order-status.formed
+									span Сформирован
+							.options(style='display:none;')
+								.order-status.formed
+									span Сформирован
+								.order-status.rambleon
+									span В пути
+								.order-status.ready
+									span Исполнен
+						.status-select
+							.selected
+								.order-status.credit
+									span Оплачен
+							.options(style='display:none;')
+								.order-status.debt
+									span Не оплачен
+								.order-status.credit
+									span Оплачен
+					.itgreen-cell
+						a.download(href='javascript:void(0)')
+
+		.paginator
+			.page 1
+			.page.current 2
+			.page 3
