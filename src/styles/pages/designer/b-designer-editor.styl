@@ -1,0 +1,69 @@
+.b-designer-editor
+  position relative
+
+  &__viewport
+      position relative
+      height 500px
+      overflow hidden
+      user-select none
+
+  &__img
+    position absolute
+
+  &__block
+    position absolute
+
+  // &__tools
+  //   position absolute
+  //   top 0
+  //   left 0
+
+  &__bar
+    position absolute
+    z-index 1
+
+    &_hide
+      display none !important
+
+    &_view
+      left 0
+      top 56px
+      // width 65px
+
+    &_tools
+      top 0
+      left 0
+
+  +mq(main)
+    position static
+    padding-bottom 37px
+
+    &__viewport
+      height 360px
+
+    &__bar
+      position relative
+      top auto
+      bottom auto
+      left auto
+      right auto
+      margin-bottom 20px
+      margin-right 16px
+      display inline-block
+      vertical-align top
+
+      &_view
+        // margin-bottom 20px
+        // display inline-block
+        // vertical-align top
+        font-size 0
+
+        .b-toolbar__item
+          display inline-block
+          vertical-align middle
+
+          &:first-child
+            border-radius: 3px 0 0 3px;
+
+          &:last-child
+            border-radius: 0 3px 3px 0;

@@ -4,3 +4,4 @@ mixin icon(name, basePath, prefix)
 	- var iconName = prefix + name;
 	svg.icon(class=iconName)&attributes(attributes)
 		use(xlink:href=basePath+'#' + iconName)
+	//- include /svg-icons/#{name}

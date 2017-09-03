@@ -1,5 +1,6 @@
 .modal-holder
   position fixed
+  z-index 3
   top 0
   left 0
   overflow auto
@@ -36,20 +37,24 @@
     border-top 1px solid #f0f0f0
     text-align center
     margin-bottom 32px
+
     .social-enter-hint
       font-family LatoBold
       color black
       font-size 22px
       padding-top 25px
       padding-bottom 25px
+
     .social-enter-buttons
       display  inline-block
       font-family LatoBold
       font-size 24px
       color white
+
       .social-enter-button
         box-sizing border-box
         display inline-block
+        vertical-align top
         width 240px
         height 51px
         line-height 51px
@@ -64,21 +69,57 @@
         background-position-x 26px
         padding-left 83px
         margin-right 10px
+
       .enter-fb
         background-color #2e5d9a
         background-image url('../img/fb-enter.png')
         background-position-x 25px
         padding-left 65px
+
+      .enter-google-images
+        margin-left 10px
+        border 2px solid #e1e1e1
+        color transparent
+        background-image url('../img/google-images.png')
+        background-position 50% 50%
+
   .register-line
     height 48px
     line-height 48px
     font-size 16px
     text-align center
     background-color #f0f0f0
+
     .first-time
       color #7f8da2
+
     .register-link
       color #4d7abe
       text-decoration underline
+
+.modal-image
+  width 750px
+
+  .social-enter
+    .social-enter-buttons
+      .social-enter-button
+        margin-bottom 19px
+        width 210px
+
+        +mq(main)
+          margin-left  auto
+          margin-right auto
+          width 210px !important
+
+  .modal-content
+    padding-bottom 5px
+
+    & > h2
+      margin-bottom 46px
+
+  .b-form-field__hint
+    padding-top 15px
+    padding-bottom 29px
+    font-size 14px
 
 @import "modal-mobile.styl"

@@ -1,0 +1,171 @@
+$pad = 11px
+
+$link-placeholder
+  display block
+  padding 18px $pad 17px
+  font normal 17px/1 LatoBold, sans-serif
+
+.b-inner-nav
+  $this = selector()
+  margin-bottom 26px
+  position relative
+  z-index 3
+  color siteDarkBlue
+
+  &__toggle
+    display none
+    box-sizing border-box
+    // width "calc(100% + 2 * %s)" % pad
+    // margin-left  - pad
+    width 100%
+    padding 18px pad 17px
+    border 1px solid #e2e2e2
+    border-width 1px 0
+    text-align left
+    text-transform uppercase
+    font normal 17px/1 LatoBold, sans-serif
+    color inherit
+    background 0
+    cursor pointer
+    transition .2s
+
+    &:hover
+    &:active
+      background: #fff
+
+  &__list
+    margin 0
+    padding 0
+    list-style none
+
+    &_main
+      margin-left  - $pad
+      margin-right - $pad
+      text-align justify
+      font-size 0
+
+      &::after
+        content ""
+        display inline-block
+        vertical-align top
+        width 100%
+
+      > {$this}__item
+        position relative
+        display inline-block
+        vertical-align top
+
+        > {$this}__link
+          position relative
+          z-index 1
+          @extend $link-placeholder
+          text-transform uppercase
+          text-decoration none
+
+          &:not(:only-child)::after
+            content ""
+            margin-left 6px
+            margin-right 20px
+            vertical-align 4px
+            display inline-block
+            border 5px solid
+            border-left-color transparent
+            border-right-color transparent
+            border-bottom 0
+
+    &_nested
+      position absolute
+      top 0
+      left 0
+      opacity 0
+      visibility hidden
+      box-sizing border-box
+      padding-top 6px
+      padding-bottom 16px
+      min-width 100%
+      background #fff
+      box-shadow 0 6px 21px rgba(0, 0, 0, 0.56)
+
+      &::before
+        content: '.'
+        visibility hidden
+        @extend $link-placeholder
+
+      {$this}__link
+        display block
+        padding 15px $pad 14px
+        font-size 16px
+        transition .2s
+
+        &:hover
+          text-decoration none
+          background #f0f0f0
+
+  &__item_hover &__list_nested
+    opacity 1
+    visibility visible
+    transition .24s
+
+  +mq(main)
+    &
+      margin-bottom 16px
+      margin-left  - pad
+      margin-right - pad
+
+    &__toggle
+      display block
+
+    &__list_main
+      display none
+      position absolute
+      top 100%
+      left 0
+      right 0
+      margin-left  0
+      margin-right 0
+      padding-top 15px
+      background #fff
+
+      > {$this}__item
+        display block
+        margin-top -1px
+
+        > {$this}__link
+          padding-left  pad
+          padding-right pad
+          border 1px solid #e2e2e2
+          border-width 1px 0
+
+          &:not(:only-child)::after
+            float right
+            margin-right 0
+            margin-top 6px
+
+    &__list_nested
+      display none
+      margin-top -1px
+      margin-bottom 2px
+      position relative
+      z-index 2
+      box-shadow none
+
+      &::before
+        content none
+
+      {$this}__link
+        padding-left  pad
+        padding-right pad
+
+    &__item_hover &__list_nested
+      display block
+
+    &_open
+      background #fff
+      box-shadow 0 6px 21px rgba(0, 0, 0, 0.56)
+
+    &_open &__toggle
+      border-color transparent
+
+    &_open  &__list_main
+      display block
+

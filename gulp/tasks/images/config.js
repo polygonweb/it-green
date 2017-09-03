@@ -5,5 +5,5 @@ module.exports = {
   src: 'src/images/**/*.*',
   watchFiles: 'src/images/**/*.*',
   dest: 'build/img',
-  imageminOptions: {}
+  // imageminOptions: {}
 }

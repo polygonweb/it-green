@@ -133,5 +133,58 @@ module.exports = {
         isStock: true
       }
     ]
-  }
+  },
+
+  innerNav: [
+    {
+      link: 'javascript:void(0)',
+      text: 'Фотосувениры',
+      children: [
+        {
+          link: 'javascript:void(0)',
+          text: 'Кружки'
+        },
+        {
+          link: 'javascript:void(0)',
+          text: 'Футболки'
+        },
+        {
+          link: 'javascript:void(0)',
+          text: 'Тарелки'
+        },
+        {
+          link: 'javascript:void(0)',
+          text: 'Чехол на телефон'
+        },
+        {
+          link: 'javascript:void(0)',
+          text: 'Пазлы'
+        },
+        {
+          link: 'javascript:void(0)',
+          text: 'Подушки'
+        }
+      ]
+    },
+    {
+      link: 'javascript:void(0)',
+      text: 'Фоторамки'
+    },
+    {
+      link: 'javascript:void(0)',
+      text: 'Фотошаблоны'
+    },
+    {
+      link: 'javascript:void(0)',
+      text: ' Детские портфолио'
+    },
+    {
+      link: 'javascript:void(0)',
+      text: 'Календари'
+    },
+    {
+      link: 'javascript:void(0)',
+      text: 'Холсты'
+    }
+  ]
 };

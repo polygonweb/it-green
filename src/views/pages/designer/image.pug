@@ -1,0 +1,180 @@
+extends partials/designer-layout
+
+block designerMain
+	.b-designer-editor
+		.b-designer-editor__tools
+			div(class=[
+				'b-toolbar',
+				'b-toolbar_pos_vert',
+				'b-designer-editor__bar',
+				'b-designer-editor__bar_view'
+			])
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn.b-toolbar__block-btn
+						.b-toolbar__block-icon.b-icon.b-icon_block-text
+						.b-toolbar__block-text Текст
+
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn.b-toolbar__block-btn
+						.b-toolbar__block-icon.b-icon.b-icon_block-img
+						.b-toolbar__block-text Фото
+
+			div(class=[
+				'b-toolbar',
+				'b-toolbar_pos_horiz',
+				'b-designer-editor__bar',
+				'b-designer-editor__bar_hide',
+				'b-designer-editor__bar_tools'
+			])
+				.b-toolbar__item.b-toolbar__item_wide
+					button(type="button").b-toolbar__btn Helvetica
+					.b-toolbar__dropdown
+						.b-tool-list
+							.b-tool-list__item Helvetica
+							.b-tool-list__item Geneva
+							.b-tool-list__item Arial
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn 18
+					.b-toolbar__dropdown
+						.b-tool-list
+							.b-tool-list__item 8
+							.b-tool-list__item 10
+							.b-tool-list__item 12
+							.b-tool-list__item 14
+							.b-tool-list__item 16
+							.b-tool-list__item 18
+							.b-tool-list__item 20
+							.b-tool-list__item 22
+							.b-tool-list__item 24
+							.b-tool-list__item 28
+							.b-tool-list__item 32
+							.b-tool-list__item 36
+							.b-tool-list__item 42
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn.b-toolbar__btn_active
+						.b-toolbar__icon.b-icon.b-icon_weight
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-icon_left
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-icon_center
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-icon_right
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-toolbar__color(style="color: red")
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-icon_layers
+					.b-toolbar__dropdown
+						.b-tool-list
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-top
+								| На передний план
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-bottom
+								| На задний план
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-forward
+								| Переложить вперед
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-backward
+								| Переложить назад
+
+			div(class=[
+				'b-toolbar',
+				'b-toolbar_pos_horiz',
+				'b-designer-editor__bar',
+				'b-designer-editor__bar_tools'
+			])
+				.b-toolbar__item.b-toolbar__item_wide
+					button(type="button").b-toolbar__btn Клипарты
+					.b-toolbar__dropdown
+						.b-toolbar__cliparts.b-cliparts
+							each art in [1, 2, 3, 4]
+								.b-cliparts__item(style='background-image: url("img/cliparts/' +  art + '.png")')
+							each art in [2, 3, 4, 1]
+								.b-cliparts__item(style='background-image: url("img/cliparts/' +  art + '.png")')
+							each art in [3, 4, 1, 2]
+								.b-cliparts__item(style='background-image: url("img/cliparts/' +  art + '.png")')
+							each art in [4, 1, 2, 3]
+								.b-cliparts__item(style='background-image: url("img/cliparts/' +  art + '.png")')
+							each art in [1, 2, 3, 4]
+								.b-cliparts__item(style='background-image: url("img/cliparts/' +  art + '.png")')
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-icon_brightness
+					.b-toolbar__dropdown
+						.b-toolbar__range
+							.b-range
+								.b-range__track
+									.b-range__fill(style={
+										height: '50%',
+										transform: 'scaleY(1)'
+									})
+								.b-range__thumb(style={
+									'bottom': 'calc(50% + 25%)'
+								})
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-icon_clip
+				.b-toolbar__item
+					button(type="button").b-toolbar__btn
+						.b-toolbar__icon.b-icon.b-icon_layers
+					.b-toolbar__dropdown
+						.b-tool-list
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-top
+								| На передний план
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-bottom
+								| На задний план
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-forward
+								| Переложить вперед
+							.b-tool-list__item
+								.b-tool-list__icon.b-icon.b-icon_layer-backward
+								| Переложить назад
+
+
+		.b-designer-editor__viewport
+			img.b-designer-editor__img(
+				src="img/editor-image.png", alt="",
+				style={
+					top:  '50%',
+					left: '50%',
+					transform: 'translate(-50%, -50%)',
+					width: 'auto',
+					height: 'auto'
+				}
+			)
+			.b-edit-block(style={
+				top: '220px',
+				left: '330px'
+			})
+				.b-edit-block__content(style={
+						'width': '192px',
+						'height': '62px',
+						'padding': '10px',
+						'background': 'url("img/cliparts/0.png")'
+					}, contenteditable)
+				.b-edit-block__tools
+					button(type="button").b-edit-block__control.b-edit-block__control_top-left
+					button(type="button").b-edit-block__control.b-edit-block__control_top-right
+					button(type="button").b-edit-block__control.b-edit-block__control_bottom-left
+					button(type="button").b-edit-block__control.b-edit-block__control_bottom-right
+					button(type="button").b-edit-block__control.b-edit-block__control_rotate
+
+
+
+		.b-previews
+			a(href=js0).b-previews__item.b-previews__item_active
+				img.b-previews__img(src="img/preview-1.png", alt="")
+			a(href=js0).b-previews__item
+				img.b-previews__img(src="img/preview-2.png", alt="")
+			a(href=js0).b-previews__item
+				img.b-previews__img(src="img/preview-3.png", alt="")
+			a(href=js0).b-previews__item
+				img.b-previews__img(src="img/preview-4.png", alt="")

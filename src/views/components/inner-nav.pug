@@ -1,0 +1,22 @@
+mixin innerNav(attrs)
+	- var attrs = attrs || []
+
+	.b-inner-nav
+		button.b-inner-nav__toggle(type="button") выберите раздел
+
+		ul(class=[
+			'b-inner-nav__list',
+			'b-inner-nav__list_main'
+		])
+			each item in attrs
+				li.b-inner-nav__item
+					a.b-inner-nav__link(href=item.link) #{item.text}
+					- var children = item.children;
+					if children
+						ul(class=[
+							'b-inner-nav__list',
+							'b-inner-nav__list_nested'
+						])
+							each child in item.children
+								li.b-inner-nav__item
+									a.b-inner-nav__link(href=child.link) #{child.text}

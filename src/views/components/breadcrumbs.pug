@@ -1,0 +1,7 @@
+mixin breadcrumbs(attrs)
+	- var attrs = attrs || attributes
+
+	ul.b-breadcrumbs
+		each item in attrs
+			li.b-breadcrumbs__item
+				a.b-breadcrumbs__link(href=item.link) #{item.text}

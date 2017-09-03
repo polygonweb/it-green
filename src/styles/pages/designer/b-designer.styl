@@ -1,0 +1,25 @@
+.b-designer
+  display table
+  border-collapse separate
+  table-layout fixed
+  box-sizing border-box
+  width 100%
+  // padding 25px
+  padding pad
+  background #fff
+
+  &__cell
+    display table-cell
+    vertical-align top
+
+    // &_main
+    &_side
+      width 331px
+
+  +mq(main)
+    margin-left: - pad
+    width "calc(100% + %s)" % (2 * pad)
+
+    &__cell
+      display block
+      width auto

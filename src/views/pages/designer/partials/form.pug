@@ -1,0 +1,39 @@
+form.b-designer-form
+	.b-designer-form__body
+		.b-designer-form__part.b-designer-form__head
+			.b-designer-form__title Кружка
+			.b-designer-form__price 260,00 #[span.rouble q]
+
+		.b-designer-form__part
+			.b-designer-form-fieldset
+				.b-designer-form-fieldset__item.b-form-field
+					label.b-designer-form-fieldset__key.b-form-field__key Цвет
+					.b-designer-form-fieldset__content.b-form-field__content
+						.itgreen-select
+							select.b-form-field__control
+								option Опция 1
+								option Опция 2
+				.b-designer-form-fieldset__item.b-form-field
+					label.b-designer-form-fieldset__key.b-form-field__key Материал
+					.b-designer-form-fieldset__content.b-form-field__content
+						.itgreen-select
+							select.b-form-field__control
+								option Опция 1
+								option Опция 2
+
+		.b-designer-form__part.b-designer-form__summary
+			.b-summary
+				.b-summary__row
+					.b-summary__cell Цвет
+					.b-summary__cell 100 #[span.rouble q]
+				.b-summary__row
+					.b-summary__cell Материал
+					.b-summary__cell 0 #[span.rouble q]
+				.b-summary__row.b-summary__result
+					.b-summary__cell Итого
+					.b-summary__cell 100070,00 #[span.rouble q]
+
+	.b-designer-form__foot
+		button.b-designer-form__submit.green-button(type="sumbit") заказать кружку
+		.b-designer-form__links
+			| #[a(href=js0) Купить шаблон] или #[a(href=js0) Выставить на продажу]

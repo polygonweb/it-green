@@ -1,0 +1,32 @@
+.b-summary
+  display table
+  border-collapse collapse
+  width 100%
+
+  &__cell
+    display table-cell
+    overflow hidden
+    white-space nowrap
+    width 1px
+
+    &:first-child
+      width auto
+
+    &:first-child::after
+      content ""
+      opacity 0.5
+      display inline-block
+      width 100%
+      border-bottom 1px dotted
+
+  &__row
+    display table-row
+
+  &__row:not(:first-child) &__cell
+    padding-top 19px
+
+  &__row:last-child &__cell
+    padding-top 29px
+
+  &__result
+    font-size 20px

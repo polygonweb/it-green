@@ -1,0 +1,22 @@
+extends /src/views/common/layout
+
+block blockContent
+	.wrapper
+		.b-inner-layout
+			+breadcrumbs([
+				{ link: 'javascript: void(0)', text: 'Главная'},
+				{ link: 'javascript: void(0)', text: 'Создать свой дизайн'}
+			])
+
+			h1.b-inner-layout__title Создай свой дизайн
+
+			+innerNav(innerNav)
+
+			.b-designer
+				.b-designer__cell.b-designer__cell_main
+					block designerMain
+						//- include editor
+
+				.b-designer__cell.b-designer__cell_side
+					block designerSide
+						include form

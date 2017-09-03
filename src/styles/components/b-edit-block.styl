@@ -1,0 +1,73 @@
+.b-edit-block
+  $borderWidth = 1px
+  position absolute
+  color siteDarkBlue
+  border $borderWidth solid
+
+  &__content
+    box-sizing border-box
+
+  // &__tools
+
+  &__control
+    $size = 11px
+    $offset = -($borderWidth + $size / 2)
+
+    position absolute
+    box-sizing border-box
+    width $size
+    height $size
+    padding 0
+    border 2px solid
+    color inherit
+    background #fff
+
+    &::before
+      content ""
+      position absolute
+      $ux-external = -9px
+      top $ux-external
+      bottom $ux-external
+      left $ux-external
+      right $ux-external
+
+    &:hover
+    &:focus
+      background currentColor
+
+    &_top-left
+      top $offset
+      left $offset
+      cursor nwse-resize
+
+    &_top-right
+      top $offset
+      right $offset
+      cursor nesw-resize
+
+    &_bottom-left
+      bottom $offset
+      left $offset
+      cursor nesw-resize
+
+    &_bottom-right
+      bottom $offset
+      right $offset
+      cursor nwse-resize
+
+    &_rotate
+      border-radius 50%
+      left 0
+      right 0
+      bottom 100%
+      margin 0 auto 11px
+
+      &::after
+        content ""
+        position absolute
+        top 100%
+        left 3px
+        height 13px
+        border-left 1px solid
+
+

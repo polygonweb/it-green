@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import DropBlock from './DropBlock';
 
 function init() {
   $(".menu-switcher").click(function() {
@@ -86,6 +87,54 @@ function init() {
       e.preventDefault();
     });
   });
+
+  /**
+   * Designer
+   * ================================================
+   */
+  $('.b-inner-nav__list_nested')
+    .closest('.b-inner-nav__item')
+    .find('.b-inner-nav__link')
+      .on('touchmove', function(e) {
+        e.stopPropagation();
+      })
+      .on('touchend', function(e) {
+        $(this)
+          .closest('.b-inner-nav__item')
+          .toggleClass('b-inner-nav__item_hover');
+        e.preventDefault();
+      })
+    .end()
+    .hover(
+      function() {
+        $(this).addClass('b-inner-nav__item_hover');
+      },
+      function() {
+        $(this).removeClass('b-inner-nav__item_hover')
+      }
+    );
+
+    $('.b-inner-nav__toggle').on('click', function(e) {
+      $(this)
+        .closest('.b-inner-nav')
+        .toggleClass('b-inner-nav_open')
+    });
+
+
+  var toolbarItems = Array.prototype.slice.call(document.querySelectorAll('.b-toolbar__item'));
+  toolbarItems.forEach(function(item) {
+    var btn = item.querySelector('.b-toolbar__btn');
+    var dropdown = item.querySelector('.b-toolbar__dropdown');
+    if (!dropdown) return;
+    new DropBlock({
+      element: item,
+      trigger: btn,
+      dropElement: dropdown,
+      activeClass: 'b-toolbar__item_open',
+      onOpen: function(element, trigger, dropElement) {},
+      onClose: function(element, trigger, dropElement) {}
+    });
+  })
 
 };
 

@@ -1,0 +1,56 @@
+.b-range
+  position relative
+  width 100%
+  height 100%
+
+  &__track
+    margin auto
+    position relative
+    height 100%
+    width 1px
+    overflow hidden
+    background #d1d1d1
+
+  &__fill
+    position absolute
+    left 0
+    right 0
+    bottom 50%
+    transform-origin 0 100%
+    margin auto
+    width 100%
+
+    &::before
+      content ""
+      position absolute
+      top 50%
+      bottom 0
+      left 0
+      right 0
+      background siteDarkBlue
+
+  &__thumb
+    position absolute
+    left 0
+    right 0
+    margin auto
+    // transform translateY(50%)
+    box-sizing border-box
+    width 16px
+    height 16px
+    border 2px solid
+    background #fff
+    color siteDarkBlue
+    border-radius 50%
+
+    &::before
+      $ux-external = -9px
+      content ""
+      position absolute
+      top $ux-external
+      bottom $ux-external
+      left $ux-external
+      right $ux-external
+
+    &:hover
+      background currentColor

@@ -1,0 +1,31 @@
+extends image
+
+block append modals
+	.modal-holder
+		.modal-window.modal-enter.modal-image
+			.modal-content
+				h2 Загрузка изображения
+				.modal-close
+				//- form.itgreen-form
+				form.b-form
+					.b-form-field
+						.b-form-field__content
+							.b-file-loader
+								label.b-file-loader__trigger
+									input(type="file").b-file-loader__input
+									span.b-file-loader__trigger-text Загрузить файл с компьютера
+								div(class=[
+									'b-file-loader__preview',
+									'b-file-loader__preview_type_jpg'
+								])
+									.b-file-loader__name Фото
+									.b-file-loader__meta (JPEG, 145 Кб)
+									button(type="button").b-file-loader__del удалить
+							.b-form-field__hint Вы можете выбрать файл формата JPG или PNG размером не более 14Mб
+
+				.social-enter
+					p.social-enter-hint или загрузить из
+					.social-enter-buttons
+						.social-enter-button.enter-vk ВКонтакте
+						.social-enter-button.enter-fb Facebook
+						.social-enter-button.enter-google-images Google Картинки
