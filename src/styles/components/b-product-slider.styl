@@ -1,0 +1,164 @@
+.b-product-slider
+  $pad = 8px
+  $cellSize = 96px
+
+  position relative
+  padding-left $cellSize
+  text-align center
+
+  &__main
+    height 480px
+    text-align center
+
+  &__main-img
+    margin auto
+    max-width 100%
+
+  &__btn
+    padding-left  11px
+    padding-right 11px
+
+    &::before
+      content ""
+      margin-right 8px
+      display inline-block
+      vertical-align text-bottom
+      font-size 23px
+      width 1em
+      height 1em
+      background url("../img/icon-edit.png") no-repeat
+
+  &__nav
+    position absolute
+    left 0
+    top - $pad
+    font-size $cellSize
+    width 1em
+
+  &__track
+    overflow hidden
+    height 5 * $cellSize
+
+  &__item
+    display block
+    font-size $cellSize
+    width  1em
+    height 1em
+    box-sizing border-box
+    border $pad solid transparent
+
+  &__link
+    position relative
+    display block
+    width 100%
+    height 100%
+    text-decoration none
+    border-radius 3px
+    background #fff
+    transition .2s
+
+  &__link:hover,
+  &__item_active &__link
+      box-shadow 0 0 5px rgba(0, 0, 0, 0.18)
+
+  &__img
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    display block
+    max-width 100%
+    max-height 100%
+    border 0
+
+
+  &__arrow
+    position absolute
+    left 0
+    overflow visible
+    display block
+    box-sizing border-box
+    width 100%
+    padding 0
+    border 0
+    background 0
+    text-align center
+    cursor pointer
+    outline 0
+
+    &::before
+      content ""
+      opacity 0.2
+      display inline-block
+      width 24px
+      height 24px
+      border-style solid
+      border-width 0 0 3px 3px
+      transition .3s
+
+    &_prev
+      bottom 100%
+
+      &::before
+        transform rotate(135deg)
+
+    &_next
+      top 100%
+
+      &::before
+        transform rotate(-45deg)
+
+    &:hover::before
+      opacity 0.8
+
+  +mq(main)
+    margin-bottom 40px
+    padding-left 0
+
+    &__main
+      margin-bottom 16px
+      height auto
+
+    &__nav
+      margin 0 auto 32px
+      position relative
+      top auto
+      width 3 * $cellSize
+
+    &__track
+      margin auto
+      width 3 * $cellSize
+      height auto
+      white-space nowrap
+      font-size 0
+
+    &__item
+      display inline-block
+      vertical-align top
+
+    &__arrow
+      top 0
+      bottom 0
+      margin auto
+      width auto
+
+      &_prev
+        margin-right 8px
+        right 100%
+        left auto
+
+        &::before
+          transform rotate(45deg)
+
+      &_next
+        margin-left 8px
+        left 100%
+        right auto
+
+        &::before
+          transform rotate(-135deg)
+
+
+

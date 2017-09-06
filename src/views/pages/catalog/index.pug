@@ -1,0 +1,65 @@
+extends /src/views/common/layout
+
+block blockContent
+	.wrapper
+		.b-inner-layout
+			+breadcrumbs([
+				{ link: 'javascript: void(0)', text: 'Главная'},
+				{ link: 'javascript: void(0)', text: 'Магазин'},
+				{ link: 'javascript: void(0)', text: 'Фотосувениры'},
+				{ link: 'javascript: void(0)', text: 'Футболки'}
+			])
+
+			h1.b-inner-layout__title Футболки
+
+			.b-sort-filter
+				.b-sort-filter__label Сортировать:
+				.b-sort-filter__items
+					.b-sort-filter__item
+						a(href=js0).b-sort-item
+							.b-sort-item__icon.b-sort-item__icon_asc
+							.b-sort-item__text По возрастанию цены
+					.b-sort-filter__item
+						a(href=js0).b-sort-item.b-sort-item_active
+							.b-sort-item__icon.b-sort-item__icon_desc
+							.b-sort-item__text По убыванию цены
+					.b-sort-filter__item
+						a(href=js0).b-sort-item
+							.b-sort-item__text По рейтингу
+					.b-sort-filter__item
+						a(href=js0).b-sort-item
+							.b-sort-item__text По новизне
+
+
+			+catalog-cards([
+				{
+					title: 'Футболка унисекс SPORTY 140, бирюзовая',
+					imageUrl: 'img/item2.png',
+					price: '465,00 c'
+				},
+				{
+					title: 'Футболка унисекс SPORTY 140, бирюзовая',
+					imageUrl: 'img/item2.png',
+					price: '465,00 c'
+				},
+				{
+					title: 'Футболка унисекс SPORTY 140, бирюзовая',
+					imageUrl: 'img/item2.png',
+					price: '465,00 c'
+				},
+				{
+					title: 'Футболка унисекс SPORTY 140, бирюзовая',
+					imageUrl: 'img/item2.png',
+					price: '465,00 c'
+				},
+				{
+					title: 'Футболка унисекс SPORTY 140, бирюзовая',
+					imageUrl: 'img/item2.png',
+					price: '465,00 c'
+				},
+				{
+					title: 'Футболка унисекс SPORTY 140, бирюзовая',
+					imageUrl: 'img/item2.png',
+					price: '465,00 c'
+				}
+			])

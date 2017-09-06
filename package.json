@@ -63,6 +63,7 @@
     "dom4": "^1.8.3",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
+    "slick-carousel": "^1.7.1",
     "svgxuse": "^1.2.4"
   }
 }

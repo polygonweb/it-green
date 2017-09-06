@@ -1,0 +1,37 @@
+.b-sort-item
+  $this = selector()
+  color siteDarkBlue
+  text-decoration none
+
+  &__text
+    display inline
+    background linear-gradient(90deg, currentColor 3px, transparent 0) repeat-x 0 100%
+    background-size 6px 1px
+
+  &__icon
+    display inline-block
+    vertical-align bottom
+    opacity 0.43
+    font-size 12px
+    width 1em
+    height 1em
+    background url("../img/sort-icons.png") no-repeat
+
+    &_asc
+      background-position 0 0
+
+    &_desc
+      background-position -1em 0
+
+  &_active
+    color #373737
+    font-family LatoBold, sans-serif
+    pointer-events none
+
+    {$this}__icon
+      opacity 1
+
+  &_active
+  &:hover
+    {$this}__text
+      background 0

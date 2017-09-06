@@ -1,0 +1,33 @@
+.b-product-info
+  display table
+  table-layout fixed
+  border-collapse collapse
+
+  &__desc
+  &__sum
+    display table-cell
+    vertical-align top
+    padding 40px pad
+
+  &__sum
+    box-sizing border-box
+    width 418px
+
+  &__desc
+    p + p
+      margin-top 20px
+
+  +mq(main)
+    &__desc
+    &__sum
+      display block
+      width auto
+
+    &__sum
+      padding-top 0px
+      padding-bottom 52px
+
+    &__desc
+      padding-top 10px
+      padding-bottom 30px
+

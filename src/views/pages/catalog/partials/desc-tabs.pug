@@ -1,0 +1,37 @@
+.b-products-tabs
+
+	input.b-products-tabs__input(type='radio', name='products-tabs', id='product-info',checked)
+	.b-products-tabs__item
+		label(for='product-info').b-products-tabs__head
+			span.b-products-tabs__text информация о товаре
+		.b-products-tabs__body
+			.b-product-info
+				.b-product-info__desc
+					p Футболки Regent — удобная, практичная и недорогая одежда от бренда Sols. Модель, которую вполне можно отнести к стилю унисекс. И, конечно, Regent — это комфорт: тонкая «дышащая» ткань, воротник, защищенный от деформации резинкой с эластаном.
+					p Такая футболка делает стройной любую фигуру, а отсутствие боковых швов позволяет наносить изображение даже сбоку.
+				.b-product-info__sum
+					dl.b-info-list
+						dt.b-info-list__key Производитель
+						dd.b-info-list__value Sela
+						dt.b-info-list__key Размер
+						dd.b-info-list__value 44, 46, 48, 50, 52 (RU)
+						dt.b-info-list__key Состав
+						dd.b-info-list__value хлопок 100%, плотность 150 г/м²; джерси
+
+
+	input.b-products-tabs__input(type='radio', name='products-tabs', id='product-pay')
+	.b-products-tabs__item
+		label(for='product-pay').b-products-tabs__head
+			span.b-products-tabs__text доставка и оплата
+		.b-products-tabs__body
+			.b-product-info
+				.b-product-info__desc доставка и оплата
+
+	input.b-products-tabs__input(type='radio', name='products-tabs', id='product-performers')
+	.b-products-tabs__item
+		label(for='product-performers').b-products-tabs__head
+			span.b-products-tabs__text исполнители в вашем городе
+		.b-products-tabs__body
+			.b-product-info
+				.b-product-info__desc исполнители в вашем городе
+

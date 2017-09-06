@@ -1,0 +1,80 @@
+.b-products-tabs
+  position relative
+  overflow hidden
+  font-size 0
+  padding 0 1px
+
+  &__input
+    position absolute
+    z-index -1
+    top 0
+    left 0
+    opacity 0
+    width 1px
+    height 1px
+
+  &__item
+    display inline
+
+  &__head
+    margin 0 1px
+    display inline-block
+    vertical-align top
+    box-sizing border-box
+    width calc(33.3333% - 2px)
+    border-style solid
+    border-color transparent
+    border-width 4px 0 0
+    line-height 65px
+    font-size 17px
+    text-transform uppercase
+    font-family LatoBold, sans-serif
+    text-align center
+    color siteDarkBlue
+    background-color #f0f0f0
+    transition .2s
+    cursor pointer
+
+    &:hover
+      background-color #f8f8f8
+
+  &__text
+    display inline-block
+    line-height: 1.2
+    background linear-gradient(90deg, currentColor 3px, transparent 0) repeat-x 0% 100%
+    background-size 6px 1px
+
+  &__body
+    display none
+    float left
+    width 100%
+    font-size 14px
+    line-height 20px
+    background #fff
+
+  // &__input:checked + &__item
+
+  &__input:checked + &__item &__head
+    color #373737
+    border-top-color siteDarkBlue
+    background-color #fff
+
+  &__input:checked + &__item &__text
+    background 0
+
+  &__input:checked + &__item &__body
+    display block
+    animation showTab 1s both
+
+    @keyframes showTab
+      0%
+        opacity 0
+
+  +mq(main)
+    &__head
+      display block
+      width auto
+      border-left 0
+      border-right 0
+      border-bottom 2px solid #fff
+

@@ -1,0 +1,22 @@
+extends /src/views/common/layout
+
+block blockContent
+	.wrapper
+		.b-inner-layout
+			+breadcrumbs([
+				{ link: 'javascript: void(0)', text: 'Главная'},
+				{ link: 'javascript: void(0)', text: 'Магазин'},
+				{ link: 'javascript: void(0)', text: 'Фотосувениры'},
+				{ link: 'javascript: void(0)', text: 'Футболки'},
+				{ link: 'javascript: void(0)', text: 'Футболка REGENT 150, песочная'}
+			])
+
+			.b-product-view
+				.b-product-view__top
+					.b-product-view__cell.b-product-view__cell_main
+						include partials/slider
+					.b-product-view__cell.b-product-view__cell_side
+						include partials/form
+
+				.b-product-view__desc
+					include partials/desc-tabs

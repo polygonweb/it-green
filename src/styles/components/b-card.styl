@@ -1,0 +1,123 @@
+.b-card
+  $this = selector()
+
+  position relative
+  z-index 0
+  padding-top 31px
+  width 358px
+  font-size 16px
+  font-size 1rem
+
+  &::before
+    content ""
+    position absolute
+    z-index -1
+    left 0
+    right 0
+    top 0
+    bottom 0
+    background #fff
+    border-radius 4px
+
+  &__slides
+    text-align center
+    width 358px
+    height 240px
+    display table-cell
+    vertical-align middle
+
+  &__arrow
+    visibility hidden
+    opacity 0
+    background url(../img/arrows.png) center left
+    width 27px
+    height 41px
+    position absolute
+    cursor pointer
+    top 30%
+    transition .2s
+
+    &_previous
+      left 10px
+
+    &_next
+      background-position-x 28px
+      right 10px
+
+  &__image
+    max-width 358px
+    max-height 240px
+
+  &__title
+    margin-top 51px
+    display block
+    height 56px
+    padding-left 29px
+    font-size 1.2em
+    text-decoration underline
+
+  &__price
+    display block
+    // padding-bottom 46px
+    padding-bottom 42px
+    padding-left 31px
+    font-size 1.3em
+
+  &__footer
+    position absolute
+    opacity 0
+    visibility hidden
+    left 0
+    right 0
+    bottom -38px
+    // bottom 0
+    text-align center
+    padding 0 0 17px
+
+    &__buy-btn
+    .green-button
+      margin 0
+      box-sizing border-box
+      width 230px
+      max-width 100%
+      height auto
+      padding-top 9px
+      padding-bottom 8px
+      // font-size 0
+      // line-height 36px
+      font-size 16px
+      line-height 1
+
+      &::before
+        content: ""
+        position relative
+        top -2px
+        display inline-block
+        vertical-align middle
+        margin-right 8px
+        width 18px
+        height 19px
+        background: url("../img/basket.png") no-repeat
+
+  &:hover
+    &::before
+      bottom -38px
+      box-shadow: 0 15px 40px rgba(48, 48, 48, 0.32);
+
+    {$this}__arrow,
+    {$this}__footer
+      visibility visible
+      opacity 1
+
+  +mq(main)
+    &::before
+    &:hover::before
+      bottom 0
+
+    &__price
+      padding-bottom 18px
+
+    &__footer
+      position static
+      opacity 1
+      visibility visible

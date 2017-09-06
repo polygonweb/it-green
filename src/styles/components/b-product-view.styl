@@ -1,0 +1,37 @@
+.b-product-view
+  background #fff
+
+  &__top
+    display table
+    table-layout fixed
+    border-collapse separate
+    border-spacing 0
+    width 100%
+    box-sizing border-box
+    padding 93px 48px 67px 16px
+
+  &__cell
+    display table-cell
+    vertical-align top
+
+    &_main
+      width auto
+
+    &_side
+      width 427px
+
+  // &__desc
+
+  +mq(main)
+    &
+      margin-left  - pad
+      margin-right - pad
+      margin-bottom 37px
+
+    &,
+    &__cell
+      display block
+      width auto
+
+    &__top
+      padding 26px 16px 29px

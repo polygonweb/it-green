@@ -1,5 +1,15 @@
 mixin catalog-items(title, data)
-	span.catalog-title.title #{title}
+	if title
+		span.catalog-title.title #{title}
 	.catalog-items
 		each item in data
 			+catalog-item(item)
+
+mixin catalog-cards(data)
+	.b-cards
+		.b-cards__items
+			each item in data
+				.b-cards__item
+					+catalog-card(item)
+		.b-cards__footer
+			button(type='button').b-outline-btn Показать еще

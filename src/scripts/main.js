@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import DropBlock from './DropBlock';
+// import 'slick-carousel';
 
 function init() {
   $(".menu-switcher").click(function() {
@@ -135,6 +136,44 @@ function init() {
       onClose: function(element, trigger, dropElement) {}
     });
   })
+
+  /**
+   * Catalog Product view
+   */
+  // ;(function() {
+  //   var $slider = $('.b-product-slider');
+  //   if (!$slider.length) return;
+
+  //   var $previewSlider = $slider.find('.b-previews');
+  //   if (!$previewSlider.length) return;
+
+  //   var $slides = $previewSlider.find('.b-previews__item');
+
+  //   $previewSlider.slick({
+  //     accessibility: false,
+  //     infinite: false,
+  //     prevArrow: $('.b-product-slider__arrow_prev'),
+  //     nextArrow: $('.b-product-slider__arrow_next'),
+  //     slidesToShow: 5,
+  //     vertical: true,
+  //     responsive: [
+  //       {
+  //         breakpoint: 1250,
+  //         settings: {
+  //           slidesToShow: 3,
+  //           vertical: false
+  //         }
+  //       }
+  //     ]
+  //   });
+
+  //   $($slides[0]).addClass('b-previews__item_active');
+
+  //   $previewSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+  //     $($slides[currentSlide]).removeClass('b-previews__item_active');
+  //     $($slides[nextSlide]).addClass('b-previews__item_active');
+  //   });
+  // })();
 
 };
 

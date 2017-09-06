@@ -1,0 +1,34 @@
+.b-cards
+  font-size 0
+  // padding-top 15px
+
+  &__item
+    margin-bottom 64px
+    margin-right 62px
+    display inline-block
+    vertical-align top
+    width 358px
+    font-size 16px
+    font-size 1rem
+
+    &:nth-child(3n)
+      margin-right 0
+
+  &__footer
+    text-align center
+    padding-bottom 45px
+
+  +mq(main)
+    padding-top
+    text-align center
+
+    &__footer
+      padding-top 27px
+
+    &__item
+    &__item:nth-child(3n)
+      margin-left auto
+      margin-right auto
+      margin-bottom 24px
+      display block
+      // overflow hidden
