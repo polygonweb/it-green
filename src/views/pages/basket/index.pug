@@ -1,0 +1,68 @@
+extends /src/views/common/layout
+
+block blockContent
+	.wrapper
+		.b-inner-layout
+			+breadcrumbs([
+				{ link: 'javascript: void(0)', text: 'Главная'},
+				{ link: 'javascript: void(0)', text: 'Корзина '}
+			])
+
+			h1.b-inner-layout__title Корзина
+
+			.b-basket-layout
+				.b-basket-layout__grid
+					table.b-data-grid
+						colgroup
+							col(style='width: 375px')
+							col(style='width: 188px')
+							col(style='width: 160px')
+							col(style='width: 117px')
+							col(style='width: 1px')
+						thead.b-data-grid__head
+							tr.b-data-grid__row
+								th.b-data-grid__head-cell Наименование
+								th.b-data-grid__head-cell Количество
+								th.b-data-grid__head-cell Цена
+								th.b-data-grid__head-cell Сумма
+								th.b-data-grid__head-cell
+
+						each item in [1, 2, 3, 4]
+							tbody.b-data-grid__item
+								tr.b-data-grid__row
+									td.b-data-grid__cell.b-data-grid__cell_main
+										.b-product-preview
+											.b-product-preview__img-cell
+												img(src='img/product/preview-1.jpg', alt='')
+											.b-product-preview__desc-cell
+												a(href=js0) Футболка унисекс SPORTY  140, бирюзовая
+									td.b-data-grid__cell.b-data-grid__cell_control
+										.b-number-spinner
+											.b-number-spinner__control
+												input(type='text', value='2').b-text-input.b-number-spinner__input
+												button(type='button').b-number-spinner__btn.b-number-spinner__btn_down
+												button(type='button').b-number-spinner__btn.b-number-spinner__btn_up
+											.b-number-spinner__label шт
+									td.b-data-grid__cell.b-data-grid__cell_price 260 #[span.rouble q]
+									td.b-data-grid__cell.b-data-grid__cell_sum
+										.b-data-grid__sum 520 #[b.rouble q]
+									td.b-data-grid__cell.b-data-grid__cell_controls
+										button(type='button').b-data-grid__del
+
+				.b-basket-layout__form
+					form.b-basket-form
+						.b-basket-form__head
+							| Общая стоимость
+							.b-basket-form__price 2080,00 #[span.rouble q]
+						.b-basket-form__body
+							.b-basket-form__label Купон
+							.b-basket-form-field
+								.b-basket-form-field__cell
+									input(type='text').b-basket-form-field__control.b-text-input.b-text-input_width_full
+								.b-basket-form-field__cell
+									button(type='button').b-basket-form-field__control.b-outline-btn.b-outline-btn_light применить
+						.b-basket-form__foot
+							button(type='button').green-button.b-basket-form__submit Оформить заказ
+
+				.b-basket-layout__footer
+					a(href=js0).b-basket-layout__back-link Вернуться в магазин

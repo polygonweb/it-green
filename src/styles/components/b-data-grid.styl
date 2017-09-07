@@ -1,0 +1,116 @@
+.b-data-grid
+  $radius = 3px
+  display table
+  border-collapse collapse
+  width 100%
+  line-height 1.2
+  font-size 12px
+
+  &__head
+    font-family LatoBold, sans-serif
+    text-align left
+    color #373737
+
+  &__head-cell
+    padding-top    10px
+    padding-bottom 10px
+
+  &__cell
+    padding-top 14px
+    padding-bottom 12px
+    vertical-align middle
+    background #fff
+
+    &:first-child
+      border-top-left-radius    $radius
+      border-bottom-left-radius $radius
+
+    &:last-child
+      padding-right 20px
+      border-top-right-radius    $radius
+      border-bottom-right-radius $radius
+
+    &_main
+      padding-left 20px
+      padding-right 110px
+
+    &_controls
+      padding-right 20px
+
+  // &__row
+
+  &__item
+    &:not(:first-of-type)::before
+      content ""
+      display table-row
+      height 4px
+
+  &__sum
+    font-size 16px
+    font-family LatoBold, sans-serif
+
+  &__del
+    display inline-block
+    padding 8px
+    border 0
+    background 0
+    border-radius 2px
+    transition .2s
+
+    &::before
+      content ""
+      display block
+      width 12px
+      height 13px
+      background url("../img/mclose.png") no-repeat 50% 50%
+
+    &:hover
+      background-color #f0f0f0
+
+  +mq(main)
+    &
+    &__cell
+    &__item
+    &__row
+      display block
+
+    &__head
+      display none
+
+    &__row
+      position relative
+      padding-top 4px
+      padding-bottom 12px
+      overflow hidden
+      background #fff
+      border-radius $radius
+
+    &__cell
+      box-sizing border-box
+      padding 22px
+      background 0
+
+      &_main
+        margin-right 70px
+        padding-bottom 17px
+
+      &_controls
+        position absolute
+        top 16px
+        right 0
+
+      &_control
+      &_price
+      &_sum
+        float left
+        width 33.3333%
+
+      &_price
+        text-align center
+
+      &_sum
+        text-align right
+
+      &_price
+      &_sum
+        line-height 41px

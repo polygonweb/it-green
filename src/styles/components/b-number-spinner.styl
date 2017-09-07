@@ -1,0 +1,61 @@
+.b-number-spinner
+  $btn-size = 22px
+  white-space nowrap
+
+  &__control
+    position relative
+    overflow hidden
+    display inline-block
+    vertical-align middle
+
+  &__input
+    width 72px
+    padding-left  $btn-size
+    padding-right $btn-size
+    text-align center
+
+  &__btn
+    position absolute
+    top    1px
+    bottom 1px
+    width $btn-size
+    padding 0
+    border 0
+    background 0
+    color #b1b1b1
+    cursor pointer
+
+    &::before
+    &::after
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      margin auto
+      background currentColor
+
+    &::before
+      content ""
+      width 13px
+      height 2px
+
+    &_down
+      left 1px
+
+    &_up
+      right 1px
+
+      &::after
+        content ""
+        width 2px
+        height 13px
+
+    &:hover
+      color siteDarkBlue
+      background #f0f0f0
+
+  &__label
+    display inline-block
+    vertical-align middle
+    padding-left 6px
